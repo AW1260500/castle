@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+.carousel {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    width: 900px;
+    animation: carousel 9s infinite;
+}
+
+.carousel-track img {
+    display: block;
+    width: 300px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* 3枚を順番に表示 */
+@keyframes carousel {
+
+    0%,
+    27% {
+        transform: translateX(0);
+    }
+
+    33%,
+    60% {
+        transform: translateX(-300px);
+    }
+
+    66%,
+    93% {
+        transform: translateX(-600px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* インジケータ */
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.indicators span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+}
+
+/* 現在のスライドを表現 */
+.indicators span:nth-child(1) {
+    animation: indicator1 9s infinite;
+}
+
+.indicators span:nth-child(2) {
+    animation: indicator2 9s infinite;
+}
+
+.indicators span:nth-child(3) {
+    animation: indicator3 9s infinite;
+}
+
+@keyframes indicator1 {
+
+    0%,
+    27% {
+        opacity: 1;
+    }
+
+    33%,
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes indicator2 {
+
+    0%,
+    27% {
+        opacity: 0.5;
+    }
+
+    33%,
+    60% {
+        opacity: 1;
+    }
+
+    66%,
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes indicator3 {
+
+    0%,
+    60% {
+        opacity: 0.5;
+    }
+
+    66%,
+    93% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
