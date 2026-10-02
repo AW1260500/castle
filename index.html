@@ -82,7 +82,7 @@
     <table border="1">
       <tr>
         <td rowspan="2">
-          <h2>栃木県の今日の天気</h2>
+          <p class="tnk">栃木県の今日の天気</p>
         </td>
         <td>
           <div id="weather"></div>
@@ -94,19 +94,16 @@
         </td>
       </tr>
     </table>
-    <!-- <h2>栃木県の今日の天気</h2>
-    <p id="hiduke">今日の日付</p>
-    <div id="weatherIcon"></div> -->
-    <!-- <h2>宇都宮城址公園</h2> -->
+    <h2>宇都宮城址公園</h2>
     <div class="swiper my-slider">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/IMG_9745.JPG" alt="スライド1" width="1000px" hight="200px" class="cl" />
+        <div class="swiper-slide"><img src="images/画像.jpg" alt="スライド1" width="1000px" hight="200px" class="cl" />
         </div>
-        <div class="swiper-slide"><img src="images/PXL_20260925_011206378.jpg" alt="スライド2" width="1000px" hight="200px"
+        <div class="swiper-slide"><img src="images/画像2.jpg" alt="スライド2" width="1000px" hight="200px"
             class="cl" /></div>
-        <div class="swiper-slide"><img src="images/IMG_9873.JPG" alt="スライド3" width="1000px" hight="200px" class="cl" />
+        <div class="swiper-slide"><img src="images/画像3.jpg" alt="スライド3" width="1000px" hight="200px" class="cl" />
         </div>
-        <div class="swiper-slide"><img src="images/IMG_9858.JPG" alt="スライド4" width="1000px" hight="200px" class="cl" />
+        <div class="swiper-slide"><img src="images/画像4.jpg" alt="スライド4" width="1000px" hight="200px" class="cl" />
         </div>
       </div>
       <div class="swiper-pagination"></div>
@@ -206,7 +203,7 @@
       const tempTomorrowMax = temps[3];
 
       document.getElementById("weather").innerHTML = `
-                <img src="${iconToday}" width="50px" alt="今日の天気">
+                <img src="${iconToday}" width="85px" alt="今日の天気">
             `;
       document.getElementById("temp").innerHTML = `
                 気温：${tempTodayMin}℃ ～ ${tempTodayMax}℃
